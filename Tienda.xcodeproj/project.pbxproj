@@ -8,22 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		F3963F2D21B7719500493F20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3963F2C21B7719500493F20 /* AppDelegate.swift */; };
-		F3963F2F21B7719500493F20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3963F2E21B7719500493F20 /* ViewController.swift */; };
+		F3963F2F21B7719500493F20 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3963F2E21B7719500493F20 /* MainViewController.swift */; };
 		F3963F3221B7719500493F20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3963F3021B7719500493F20 /* Main.storyboard */; };
 		F3963F3521B7719500493F20 /* Tienda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3963F3321B7719500493F20 /* Tienda.xcdatamodeld */; };
 		F3963F3721B7719700493F20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3963F3621B7719700493F20 /* Assets.xcassets */; };
 		F3963F3A21B7719800493F20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3963F3821B7719800493F20 /* LaunchScreen.storyboard */; };
+		F3963F4321B772EF00493F20 /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3963F4121B772EF00493F20 /* ItemViewCell.swift */; };
+		F3963F4621B7740500493F20 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3963F4521B7740500493F20 /* MainViewModel.swift */; };
+		F3963F4A21B775B600493F20 /* StoreItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3963F4821B775B600493F20 /* StoreItem+CoreDataClass.swift */; };
+		F3963F4B21B775B600493F20 /* StoreItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3963F4921B775B600493F20 /* StoreItem+CoreDataProperties.swift */; };
+		F3963F5321B783FF00493F20 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3963F5221B783FF00493F20 /* DetailViewController.swift */; };
+		F3963F5621B78A5A00493F20 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3963F5521B78A5A00493F20 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F3963F2921B7719500493F20 /* Tienda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tienda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3963F2C21B7719500493F20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3963F2E21B7719500493F20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3963F2E21B7719500493F20 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F3963F3121B7719500493F20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3963F3421B7719500493F20 /* Tienda.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tienda.xcdatamodel; sourceTree = "<group>"; };
 		F3963F3621B7719700493F20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3963F3921B7719800493F20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3963F3B21B7719800493F20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3963F4121B772EF00493F20 /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
+		F3963F4521B7740500493F20 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		F3963F4821B775B600493F20 /* StoreItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F3963F4921B775B600493F20 /* StoreItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F3963F5221B783FF00493F20 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F3963F5521B78A5A00493F20 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +69,84 @@
 			isa = PBXGroup;
 			children = (
 				F3963F2C21B7719500493F20 /* AppDelegate.swift */,
-				F3963F2E21B7719500493F20 /* ViewController.swift */,
-				F3963F3021B7719500493F20 /* Main.storyboard */,
-				F3963F3621B7719700493F20 /* Assets.xcassets */,
-				F3963F3821B7719800493F20 /* LaunchScreen.storyboard */,
-				F3963F3B21B7719800493F20 /* Info.plist */,
-				F3963F3321B7719500493F20 /* Tienda.xcdatamodeld */,
+				F3963F5421B78A4200493F20 /* Util */,
+				F3963F4C21B775D400493F20 /* CoreData */,
+				F3963F5021B7763800493F20 /* View */,
+				F3963F4721B7740C00493F20 /* Module */,
+				F3963F4F21B7761800493F20 /* Resources */,
 			);
 			path = Tienda;
+			sourceTree = "<group>";
+		};
+		F3963F4721B7740C00493F20 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				F3963F5121B783E700493F20 /* Detail */,
+				F3963F4D21B775E200493F20 /* Main */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		F3963F4C21B775D400493F20 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F3963F3321B7719500493F20 /* Tienda.xcdatamodeld */,
+				F3963F4821B775B600493F20 /* StoreItem+CoreDataClass.swift */,
+				F3963F4921B775B600493F20 /* StoreItem+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F3963F4D21B775E200493F20 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F3963F2E21B7719500493F20 /* MainViewController.swift */,
+				F3963F4521B7740500493F20 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F3963F4E21B775F400493F20 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F3963F4121B772EF00493F20 /* ItemViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F3963F4F21B7761800493F20 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3963F3621B7719700493F20 /* Assets.xcassets */,
+				F3963F3B21B7719800493F20 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F3963F5021B7763800493F20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3963F4E21B775F400493F20 /* Cell */,
+				F3963F3021B7719500493F20 /* Main.storyboard */,
+				F3963F3821B7719800493F20 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3963F5121B783E700493F20 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F3963F5221B783FF00493F20 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F3963F5421B78A4200493F20 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F3963F5521B78A5A00493F20 /* UIViewController+Extension.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +220,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3963F2F21B7719500493F20 /* ViewController.swift in Sources */,
+				F3963F5621B78A5A00493F20 /* UIViewController+Extension.swift in Sources */,
+				F3963F4A21B775B600493F20 /* StoreItem+CoreDataClass.swift in Sources */,
+				F3963F4621B7740500493F20 /* MainViewModel.swift in Sources */,
+				F3963F2F21B7719500493F20 /* MainViewController.swift in Sources */,
 				F3963F3521B7719500493F20 /* Tienda.xcdatamodeld in Sources */,
+				F3963F4321B772EF00493F20 /* ItemViewCell.swift in Sources */,
 				F3963F2D21B7719500493F20 /* AppDelegate.swift in Sources */,
+				F3963F4B21B775B600493F20 /* StoreItem+CoreDataProperties.swift in Sources */,
+				F3963F5321B783FF00493F20 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,12 +376,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAW8PH9SP3;
-				INFOPLIST_FILE = Tienda/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Tienda/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.artkode.Tienda;
+				PRODUCT_BUNDLE_IDENTIFIER = com.artkode.TiendaAli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -306,12 +394,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAW8PH9SP3;
-				INFOPLIST_FILE = Tienda/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Tienda/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.artkode.Tienda;
+				PRODUCT_BUNDLE_IDENTIFIER = com.artkode.TiendaAli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -85,4 +85,12 @@ class MainViewModel : MainProtocol{
         return UIImage(named: self.storeCollection[indexPath.row].imageName!)!
     }
     
+    func getProductIdentifier() -> Set<String>{
+        var productsId = Set<String>()
+        storeCollection.forEach { (storeItem) in
+            productsId.insert(storeItem.productIdentifier!)
+        }
+        return productsId
+    }
+    
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 //MARK: - MainViewController
 class MainViewController: UIViewController {
 
@@ -19,6 +20,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewModel()
+        let productRequest = SKProductsRequest(productIdentifiers: viewModel.getProductIdentifier())
+        productRequest.delegate = self
+        productRequest.start()
     }
     
     func initViewModel() {
@@ -86,6 +90,17 @@ extension MainViewController : ItemViewCellDelegate {
             return
         }
         performSegue(withIdentifier: "detail_segue", sender: viewModel.getImage(at: IndexPath(row: index, section: 0)))
+    }
+    
+}
+
+extension MainViewController : SKProductsRequestDelegate{
+    
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+        response.products.forEach { (product) in
+            print(product.localizedTitle)
+        }
+        print("productos invalidos \(response.invalidProductIdentifiers)")
     }
     
 }

@@ -60,7 +60,8 @@ extension MainViewController : UITableViewDataSource {
         }
         cell.updateUI(item: item)
         products.forEach { (product) in
-            if product.productIdentifier == viewModel.getItem(at: indexPath).productIdentifier {
+            if product.productIdentifier == viewModel.getItem(at: indexPath).productIdentifier,
+                !viewModel.getItem(at: indexPath).purchased{
                 cell.getPriceLabel(product: product)
                 cell.itemTitleLabel.text = product.localizedTitle
                 cell.itemImageView.image = UIImage(named: viewModel.getItem(at: indexPath).imageName!)
@@ -129,12 +130,14 @@ extension MainViewController : SKPaymentTransactionObserver {
                 print("purchasing")
             case .purchased:
                 print("purchased")
+                viewModel.unlockStoreItem(identifier: transaction.payment.productIdentifier)
                 SKPaymentQueue.default().finishTransaction(transaction)
             case .failed:
                 print("failed")
                 SKPaymentQueue.default().finishTransaction(transaction)
             case .restored:
                 print("restored")
+                viewModel.unlockStoreItem(identifier: transaction.payment.productIdentifier)
                 SKPaymentQueue.default().finishTransaction(transaction)
             case .deferred:
                 print("deferred")

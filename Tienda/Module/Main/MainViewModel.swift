@@ -33,6 +33,7 @@ class MainViewModel : MainProtocol{
             createItemStore(title: "Ride the lightning", imageName: "ride", purchased: false, productIdentifier: "com.artkode.tiendaali.ride")
             createItemStore(title: "Master of puppets", imageName: "master", purchased: false, productIdentifier: "com.artkode.tiendaali.master")
             createItemStore(title: "... and justice for all", imageName: "justice", purchased: false, productIdentifier: "com.artkode.tiendaali.justice")
+            createItemStore(title: "Madonna", imageName: "madonnaTest", purchased: false, productIdentifier: "com.artkode.tiendaali.madonnatest")
             updateStore()
             self.reloadData?()
         }
@@ -54,6 +55,26 @@ class MainViewModel : MainProtocol{
         do {
             try context.save()
         }catch {}
+        
+    }
+    
+    func unlockStoreItem(identifier:String){
+        
+        storeCollection.forEach { (storeItem) in
+            if storeItem.productIdentifier! == identifier {
+                storeItem.purchased = true
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let persistenceContainer = appDelegate.persistentContainer
+                let context = persistenceContainer.viewContext
+                
+                do {
+                    try context.save()
+                    self.reloadData?()
+                }catch{}
+                
+            }
+        }
         
     }
     

@@ -34,7 +34,8 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func restorePurchaseAction(sender : Any) {
-        print("restore purchase")
+        //print("restore purchase")
+        SKPaymentQueue.default().restoreCompletedTransactions()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

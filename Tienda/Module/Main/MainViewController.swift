@@ -15,6 +15,8 @@ class MainViewController: UIViewController {
         return MainViewModel()
     }()
     
+    var products = [SKProduct]()
+    
     @IBOutlet weak var tableView : UITableView!
     
     override func viewDidLoad() {
@@ -57,6 +59,13 @@ extension MainViewController : UITableViewDataSource {
                 return UITableViewCell()
         }
         cell.updateUI(item: item)
+        products.forEach { (product) in
+            if product.productIdentifier == viewModel.getItem(at: indexPath).productIdentifier {
+                cell.getPriceLabel(product: product)
+                cell.itemTitleLabel.text = product.localizedTitle
+                cell.itemImageView.image = UIImage(named: viewModel.getItem(at: indexPath).imageName!)
+            }
+        }
         cell.purchaseButton.tag = indexPath.row
         cell.delegate = self
         cell.selectionStyle = .none
@@ -97,10 +106,9 @@ extension MainViewController : ItemViewCellDelegate {
 extension MainViewController : SKProductsRequestDelegate{
     
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        response.products.forEach { (product) in
-            print(product.localizedTitle)
-        }
-        print("productos invalidos \(response.invalidProductIdentifiers)")
+        products = response.products
+        self.tableView.reloadData()
+        self.view.layoutIfNeeded()
     }
     
 }

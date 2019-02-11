@@ -88,11 +88,18 @@ extension MainViewController : UITableViewDelegate {
 extension MainViewController : ItemViewCellDelegate {
     
     func purchaseItem(at index: Int) {
-        if viewModel.getItem(at: IndexPath(row: index, section: 0)).purchased == false {
+        let product = viewModel.getItem(at: IndexPath(row: index, section: 0))
+        if product.purchased == false {
             DispatchQueue.main.async {
                 self.alert(message: "¿Estas seguro que deseas adquirir el producto?", completion: { (response) in
                     if response == .yes {
-                        print("Proceso de compra")
+                        self.products.forEach({ (productFromApple) in
+                            if product.productIdentifier! == productFromApple.productIdentifier {
+                                SKPaymentQueue.default().add(self)
+                                let payment = SKPayment(product: productFromApple)
+                                SKPaymentQueue.default().add(payment)
+                            }
+                        })
                     }
                 })
             }
@@ -109,6 +116,14 @@ extension MainViewController : SKProductsRequestDelegate{
         products = response.products
         self.tableView.reloadData()
         self.view.layoutIfNeeded()
+    }
+    
+}
+
+extension MainViewController : SKPaymentTransactionObserver {
+    
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        print("transaccion finalizada")
     }
     
 }

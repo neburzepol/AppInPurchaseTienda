@@ -123,7 +123,23 @@ extension MainViewController : SKProductsRequestDelegate{
 extension MainViewController : SKPaymentTransactionObserver {
     
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        print("transaccion finalizada")
+        transactions.forEach { (transaction) in
+            switch transaction.transactionState {
+            case .purchasing:
+                print("purchasing")
+            case .purchased:
+                print("purchased")
+                SKPaymentQueue.default().finishTransaction(transaction)
+            case .failed:
+                print("failed")
+                SKPaymentQueue.default().finishTransaction(transaction)
+            case .restored:
+                print("restored")
+                SKPaymentQueue.default().finishTransaction(transaction)
+            case .deferred:
+                print("deferred")
+            }
+        }
     }
     
 }

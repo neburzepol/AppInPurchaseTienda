@@ -19,6 +19,7 @@
 		F3963F4B21B775B600493F20 /* StoreItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3963F4921B775B600493F20 /* StoreItem+CoreDataProperties.swift */; };
 		F3963F5321B783FF00493F20 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3963F5221B783FF00493F20 /* DetailViewController.swift */; };
 		F3963F5621B78A5A00493F20 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3963F5521B78A5A00493F20 /* UIViewController+Extension.swift */; };
+		F3FA3795221DB25400117CB3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3FA3794221DB25400117CB3 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,13 +30,13 @@
 		F3963F3421B7719500493F20 /* Tienda.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tienda.xcdatamodel; sourceTree = "<group>"; };
 		F3963F3621B7719700493F20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3963F3921B7719800493F20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F3963F3B21B7719800493F20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3963F4121B772EF00493F20 /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
 		F3963F4521B7740500493F20 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		F3963F4821B775B600493F20 /* StoreItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F3963F4921B775B600493F20 /* StoreItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F3963F5221B783FF00493F20 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F3963F5521B78A5A00493F20 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		F3FA3794221DB25400117CB3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +118,8 @@
 		F3963F4F21B7761800493F20 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F3FA3794221DB25400117CB3 /* Info.plist */,
 				F3963F3621B7719700493F20 /* Assets.xcassets */,
-				F3963F3B21B7719800493F20 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -207,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3FA3795221DB25400117CB3 /* Info.plist in Resources */,
 				F3963F3A21B7719800493F20 /* LaunchScreen.storyboard in Resources */,
 				F3963F3721B7719700493F20 /* Assets.xcassets in Resources */,
 				F3963F3221B7719500493F20 /* Main.storyboard in Resources */,
